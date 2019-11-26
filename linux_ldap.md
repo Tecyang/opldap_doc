@@ -42,7 +42,7 @@ gid ldap
 uri     ldap://ldap.66123123.com:389
 base    dc=66123123,dc=com
 binddn  cn=admin,dc=66123123,dc=com
-bindpw  leading
+bindpw  ******
 ssl     off
 
 #重启服务
