@@ -5,10 +5,10 @@ import json
 
 class GenerateUser:
 
-    path = os.path.dirname(__file__)
+    path = os.path.dirname(__file__) + '/userimport'
 
     def getFileList(self):
-        files = os.listdir(self.path + '/userimport')
+        files = os.listdir(self.path)
         for file in files:
             print(file)
             if file.find('txt') > 0:
