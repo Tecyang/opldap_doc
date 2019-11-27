@@ -8,7 +8,7 @@ class GenerateUser:
     path = os.path.dirname(__file__)
 
     def getFileList(self):
-        files = os.listdir(self.path)
+        files = os.listdir(self.path + '/userimport')
         for file in files:
             print(file)
             if file.find('txt') > 0:
