@@ -18,7 +18,7 @@ yum install -y nss-pam-ldapd openldap-clients
 cp /etc/openldap/ldap.conf /etc/openldap/ldap.conf.old
 cat >> /etc/openldap/ldap.conf <<EOF
 host ldap.66123123.com
-BASE dc=66123123,dec=com
+BASE dc=66123123,dc=com
 URI ldap://ldap.66123123.com ldap://ldap.66123123.com:389
 ssl off
 EOF
