@@ -68,7 +68,7 @@ getent passwd|grep leading
 #### 配置pam配置 
 ```shell
 #备份配置
-sudo cp /etc/pam.d/password-auth /etc/pam.d/password-auth
+sudo cp /etc/pam.d/password-auth /etc/pam.d/password-auth.old
 
 #增加如下配置
 auth        sufficient    pam_ldap.so use_first_pass
