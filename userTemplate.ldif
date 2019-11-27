@@ -1,0 +1,15 @@
+dn: uid=UID,ou=people,dc=66123123,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+uid: UID
+sn: SN
+cn: CN
+givenName: GIVEN_NAME
+displayName: DISP_NAME
+uidNumber: 2000
+gidNumber: 1000
+mail: MAIL
+userPassword: PASSWORD
+loginShell: /bin/bash
+homeDirectory: /
+gecos: 1
