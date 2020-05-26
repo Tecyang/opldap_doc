@@ -6,7 +6,7 @@ sn: SN
 cn: CN
 givenName: GIVEN_NAME
 displayName: DISP_NAME
-uidNumber: 2000
+uidNumber: NUMBER
 gidNumber: 1000
 mail: MAIL
 userPassword: PASSWORD
