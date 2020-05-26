@@ -5,23 +5,23 @@
 
 ### 环境配置
 ```shell
-echo '192.168.157.173   ldap.66123123.com' >> /etc/hosts
+sudo bash -c "echo '192.168.157.173   ldap.66123123.com' >> /etc/hosts"
 ```
 ### 软件安装
 ```shell
-yum install -y nss-pam-ldapd openldap-clients
+sudo yum install -y nss-pam-ldapd openldap-clients
 ```
 
 #### 配置openLDAP-client
 ```shell
 #配置ldapclient 配置文件
-cp /etc/openldap/ldap.conf /etc/openldap/ldap.conf.old
-cat >> /etc/openldap/ldap.conf <<EOF
+sudo cp /etc/openldap/ldap.conf /etc/openldap/ldap.conf.old
+sudo bash -c "cat >> /etc/openldap/ldap.conf <<EOF
 host ldap.66123123.com
 BASE dc=66123123,dc=com
 URI ldap://ldap.66123123.com ldap://ldap.66123123.com:389
 ssl off
-EOF
+EOF"
 ```
 通过如下命令测试客户端配置是否正确:
 ```shell
@@ -33,7 +33,7 @@ ldapsearch -x -W -D "cn=admin,dc=66123123,dc=com" -b "ou=people,dc=66123123,dc=c
 
 ```shell
 #备份 nslcd 配置
-cp /etc/nslcd.conf /etc/nslcd.conf.old
+sudo cp /etc/nslcd.conf /etc/nslcd.conf.old
 sudo vim /etc/nslcd.conf
 #修改为如下配置:
 uid nslcd
@@ -53,12 +53,12 @@ sudo systemctl restart nslcd
 [nsswitch.conf文件详解](https://blog.csdn.net/lcr_happy/article/details/59109163)
 ```shell
 #备份默认配置
-cp /etc/nsswitch.conf /etc/nsswitch.conf.old
+sudo cp /etc/nsswitch.conf /etc/nsswitch.conf.old
 
 #让 NSS 服务使用 OpenLDAP 服务器
-sed -i '/^passwd:.*$/s//&  ldap/g' /etc/nsswitch.conf
+sudo bash -c "sed -i '/^passwd:.*$/s//&  ldap/g' /etc/nsswitch.conf
 sed -i '/^shadow:.*$/s//&  ldap/g' /etc/nsswitch.conf
-sed -i '/^group:.*$/s//&  ldap/g' /etc/nsswitch.conf
+sed -i '/^group:.*$/s//&  ldap/g' /etc/nsswitch.conf"
 
 #验证配置
 getent passwd|grep leading
