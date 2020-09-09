@@ -89,3 +89,38 @@ PasswordAuthentication yes
 #重启服务
 sudo systemctl restart sshd
 ```
+
+
+
+#### 配置sftp分组权限
+``` shell
+#配置文件备份
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.old.2
+
+#根目录创建sftp目录 
+sudo mkdir /sftp
+sudo chown root:root /sftp
+sudo chmod 755 /sftp
+
+#创建用户可操作目录
+sudo mkdir /sftp/uploads
+sudo chown sftp:sftp /sftp/uploads
+
+#修改配置文件
+sed -i '/^Subsystem.*sftp.*$/s/^/#/g' /etc/ssh/sshd_config
+
+sed -i '$a\Subsystem       sftp    internal-sftp\
+Match Group sftp\
+PasswordAuthentication yes\
+ChrootDirectory /sftp\
+ForceCommand internal-sftp\
+PermitTunnel no\
+AllowAgentForwarding no\
+AllowTcpForwarding no\
+X11Forwarding no\
+' /etc/ssh/sshd_config
+
+#重启服务
+sudo systemctl restart sshd
+
+```
