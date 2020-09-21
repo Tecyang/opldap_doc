@@ -123,4 +123,8 @@ X11Forwarding no\
 #重启服务
 sudo systemctl restart sshd
 
+#设置同步目录绑定
+
+mount --bind /home/produce/nas/leading_erp_file/guangfa guangfa
+
 ```
