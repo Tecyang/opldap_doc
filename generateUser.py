@@ -10,14 +10,14 @@ class GenerateUser:
     def getFileList(self):
         files = os.listdir(self.path)
         # 生成用户的起始id
-        uid_number = 2088
+        uid_number = 2089
         for file in files:
             print(file)
             if file.find('txt') > 0:
-                self.generateUser(file,uid_number)
-                uid_number = uid_number+1
+                self.generateUser(file, uid_number)
+                uid_number = uid_number + 1
 
-    def generateUser(self, file,uid_number=2000):
+    def generateUser(self, file, uid_number=2000):
 
         with open(self.path + '/' + file) as f:
             j_context = json.loads(f.read())
