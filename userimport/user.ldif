@@ -14,3 +14,19 @@ userPassword: chongyu1235
 loginShell: /bin/bash
 homeDirectory: /
 gecos: 1
+
+dn: uid=diyaping,ou=people,dc=66123123,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+uid: diyaping
+sn: 邸
+cn: 亚萍
+givenName: 亚萍
+displayName: 邸亚萍
+uidNumber: 2093
+gidNumber: 1000
+mail: diyaping@163.com
+userPassword: a111111
+loginShell: /bin/bash
+homeDirectory: /
+gecos: 1
