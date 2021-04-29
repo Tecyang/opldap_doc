@@ -1,16 +1,16 @@
 
-dn: uid=chenjianbin,ou=people,dc=66123123,dc=com
+dn: uid=xubo,ou=people,dc=66123123,dc=com
 objectClass: inetOrgPerson
 objectClass: posixAccount
-uid: chenjianbin
-sn: 陈
-cn: 建斌
-givenName: 建斌
-displayName: 陈建斌
-uidNumber: 2092
+uid: xubo
+sn: 徐
+cn: 博
+givenName: 博
+displayName: 徐博
+uidNumber: 2094
 gidNumber: 1000
-mail: 1030033085@qq.com
-userPassword: chongyu1235
+mail: xubo@66123123.net
+userPassword: passwd2lx
 loginShell: /bin/bash
 homeDirectory: /
 gecos: 1
