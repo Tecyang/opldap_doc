@@ -10,7 +10,7 @@ class GenerateUser:
     def getFileList(self):
         files = os.listdir(self.path)
         # 生成用户的起始id
-        uid_number = 2096
+        uid_number = 2098
         for file in files:
             print(file)
             if file.find("txt") > 0:

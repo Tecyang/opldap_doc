@@ -14,3 +14,35 @@ userPassword: caorundong
 loginShell: /bin/bash
 homeDirectory: /
 gecos: 1
+
+dn: uid=sunlee,ou=people,dc=66123123,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+uid: sunlee
+sn: li
+cn: yang
+givenName: yang
+displayName: liyang
+uidNumber: 2096
+gidNumber: 1000
+mail: liyang@66123123.net
+userPassword: Sunlee@2021
+loginShell: /bin/bash
+homeDirectory: /
+gecos: 1
+
+dn: uid=liugaofeng,ou=people,dc=66123123,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+uid: liugaofeng
+sn: 刘
+cn: 高峰
+givenName: 高峰
+displayName: 刘高峰
+uidNumber: 2097
+gidNumber: 1000
+mail: liugaofeng@66123123.net
+userPassword: a111111
+loginShell: /bin/bash
+homeDirectory: /
+gecos: 1
