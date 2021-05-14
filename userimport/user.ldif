@@ -110,3 +110,19 @@ userPassword: lxd111
 loginShell: /bin/bash
 homeDirectory: /
 gecos: 1
+
+dn: uid=zhangnan,ou=people,dc=66123123,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+uid: zhangnan
+sn: 张
+cn: 楠
+givenName: 楠
+displayName: 张楠
+uidNumber: 2102
+gidNumber: 1000
+mail: zhangnan@66123123.net
+userPassword: a111111
+loginShell: /bin/bash
+homeDirectory: /
+gecos: 1
