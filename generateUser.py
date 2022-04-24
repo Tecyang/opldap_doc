@@ -36,7 +36,7 @@ class GenerateUser:
                 .replace("PASSWORD", j_context.get("密码"))
                 .replace("NUMBER", str(uid_number))
             )
-            print(USER)
+            #print(USER)
             f.close()
 
             user = self.path + "/user.ldif"
